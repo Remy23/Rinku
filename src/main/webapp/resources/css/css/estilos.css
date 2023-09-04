@@ -1,0 +1,32 @@
+/* Header */
+.navbar{
+	margin-bottom: 0;
+}
+
+.jumbotron{
+	background: #2A2B2C;
+	color: #fff;
+	padding: 10px 0;
+}
+
+.titulo-disenio{
+	font-size: 40px;
+}
+
+/* Footer */
+
+.footerActual{
+	background: #2A2B2C;
+	color: #fff;
+	padding: 20px 0;
+}
+
+.sizeInput{
+	width: 600px;
+}
+
+.texto_modal{
+	font-family: Arial;
+	font-size: 16px;
+	margin-right:auto
+}
