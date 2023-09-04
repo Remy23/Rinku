@@ -30,7 +30,7 @@ public class AdministradorController {
 		model.addAttribute("serverName", request.getServerName());//Se envia el host
 		model.addAttribute("port", request.getServerPort());//Se envia el puerto con el que se esta ejecutando el servidor
 		model.addAttribute("contextPath", request.getContextPath()); //Se envia el nombre del contexto de la aplicacion
-		
+		System.out.println("");
 		return "Index";
 	}
 }
