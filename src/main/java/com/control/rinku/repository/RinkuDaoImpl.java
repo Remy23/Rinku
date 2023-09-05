@@ -169,6 +169,7 @@ public class RinkuDaoImpl extends ConnectionDatabase {
             	detalle.setRetencion(rs.getString("retencion"));
             	detalle.setVales(rs.getString("vales"));
             	detalle.setSueldoTotal(rs.getString("sueldo_total"));
+            	detalle.setNombreEmpleado(rs.getString("NOMBRE_EMPLEADO"));
             }
            
         } catch (SQLException e) {

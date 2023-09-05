@@ -12,7 +12,7 @@
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <div class="container">
-<a class="navbar-brand" href="index.html"><img src="images/logo_creditos.png" width="70" height="50"></a>
+<a class="navbar-brand" href="index.html"><img src= "${scheme}://${serverName}:${port}${contextPath}/resources/images/images/logo.png" width="70" height="50"></a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button> 
@@ -25,21 +25,10 @@
             Operaciones
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="${scheme}://${serverName}:${port}${contextPath}/alta">Alta</a></li>
+<!--             <li><a class="dropdown-item" href="#">Another action</a></li> -->
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Reportes
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="${scheme}://${serverName}:${port}${contextPath}/captura">Captura de entregas</a></li>
           </ul>
         </li> 
       </ul>
@@ -104,13 +93,16 @@
     <div class="col-auto">
       <button type="submit" class="btn btn-primary mb-3" id="validarSolicitud" onclick="buscarDetalle()">Buscar</button>
   </div>
+  <div style="color: green;">
+  <strong id="nombreEmpleado">NOMBRE: </strong>
+  </div>
     </div>
     <div class="modal-body text-justify" >
         <strong>DETALLE</strong>
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Horas Trabajadas</th>
+            <th scope="col">Pago Horas Trabajadas</th>
             <th scope="col">Pago Total por Entregas</th>
             <th scope="col">Pago Total por Bonos</th>
             <th scope="col">Retención</th>
@@ -120,12 +112,12 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong id="horasTrabajadas">40</strong></td>
-            <td><strong id="pagoPorEntregas">40</strong></td>
-            <td><strong id="pagoPorBonos">40</strong></td>
-            <td><strong id="retencion">40</strong></td>
-            <td><strong id="vales">40</strong></td>
-            <td><strong id="sueldoTotal">40</strong></td>
+            <td><strong id="horasTrabajadas">0</strong></td>
+            <td><strong id="pagoPorEntregas">0</strong></td>
+            <td><strong id="pagoPorBonos">0</strong></td>
+            <td><strong id="retencion">0</strong></td>
+            <td><strong id="vales">0</strong></td>
+            <td><strong id="sueldoTotal">0</strong></td>
           </tr>
         </tbody>
       </table>
@@ -164,7 +156,7 @@
   </footer>
 
 	<script type="text/javascript" src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/jquery/jquery-3.6.0.js"></script>
-	<script type="text/javascript" src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/js/bootstrap.js"></script>
+	<script type="text/javascript" src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/bootstrap/bootstrap.js"></script>
 
 
 </body>

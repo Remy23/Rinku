@@ -7,6 +7,8 @@ public class DetalleSueldoDTO {
 	private String retencion;
 	private String vales;
 	private String sueldoTotal;
+	private String nombreEmpleado;
+	
 	
 	public String getHorasTrabajadas() {
 		return horasTrabajadas;
@@ -44,6 +46,13 @@ public class DetalleSueldoDTO {
 	public void setSueldoTotal(String sueldoTotal) {
 		this.sueldoTotal = sueldoTotal;
 	}
+	public String getNombreEmpleado() {
+		return nombreEmpleado;
+	}
+	public void setNombreEmpleado(String nombreEmpleado) {
+		this.nombreEmpleado = nombreEmpleado;
+	}
+	
 	
 	
 }

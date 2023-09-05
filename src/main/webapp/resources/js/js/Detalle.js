@@ -21,6 +21,7 @@ function buscarDetalle(){
 				$("#retencion").html(data.retencion);
 				$("#vales").html(data.vales);
 				$("#sueldoTotal").html(data.sueldoTotal);
+				$("#nombreEmpleado").html('NOMBRE: ' + data.nombreEmpleado);
 
 			},
 			error: function(e) {
