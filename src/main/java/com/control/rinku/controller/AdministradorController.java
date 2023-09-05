@@ -26,11 +26,31 @@ public class AdministradorController {
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)
 	public String test(HttpServletRequest request, Model model) {
-		model.addAttribute("scheme", request.getScheme()); //Se envia el esquema podria ser http o https
-		model.addAttribute("serverName", request.getServerName());//Se envia el host
-		model.addAttribute("port", request.getServerPort());//Se envia el puerto con el que se esta ejecutando el servidor
-		model.addAttribute("contextPath", request.getContextPath()); //Se envia el nombre del contexto de la aplicacion
+		model.addAttribute("scheme", request.getScheme());
+		model.addAttribute("serverName", request.getServerName());
+		model.addAttribute("port", request.getServerPort());
+		model.addAttribute("contextPath", request.getContextPath());
 		System.out.println("");
 		return "Index";
+	}
+	
+	@RequestMapping(value="/alta", method = RequestMethod.GET)
+	public String alta(HttpServletRequest request, Model model) {
+		model.addAttribute("scheme", request.getScheme());
+		model.addAttribute("serverName", request.getServerName());
+		model.addAttribute("port", request.getServerPort());
+		model.addAttribute("contextPath", request.getContextPath());
+		System.out.println("");
+		return "AltaAsignacion";
+	}
+	
+	@RequestMapping(value="/captura", method = RequestMethod.GET)
+	public String captura(HttpServletRequest request, Model model) {
+		model.addAttribute("scheme", request.getScheme());
+		model.addAttribute("serverName", request.getServerName());
+		model.addAttribute("port", request.getServerPort());
+		model.addAttribute("contextPath", request.getContextPath());
+		System.out.println("");
+		return "CapturaMovimientos";
 	}
 }
