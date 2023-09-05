@@ -6,7 +6,7 @@
 <title>Index</title>
 <link rel="stylesheet" type="text/css" href=  "${scheme}://${serverName}:${port}${contextPath}/resources/css/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href=   "${scheme}://${serverName}:${port}${contextPath}/resources/css/css/estilos.css">
-<script src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/js/js/index.js"></script>
+<script src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/js/index.js"></script>
 </head>
 <body>
 <header>
@@ -74,36 +74,5 @@
 	<script type="text/javascript" src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/jquery/jquery-3.6.0.js"></script>
 	<script type="text/javascript" src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/js/bootstrap.js"></script>
 
-	<script type="text/javascript">
-				// Example starter JavaScript for disabling form submissions if there are invalid fields
-		(
-			function () {
-		  'use strict'
-
-		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-		  var forms = document.querySelectorAll('.needs-validation')
-
-		  // Loop over them and prevent submission
-		  Array.prototype.slice.call(forms).forEach(function (form) {
-		      form.addEventListener('submit', function (event) {
-		        if (!form.checkValidity()) {
-		          event.preventDefault()
-		          event.stopPropagation()
-		          alert(1);
-		        }else{
-		        	alert(2);
-		        }
-
-		        //alert(123);
-		        form.classList.add('was-validated')
-
-		      }, 
-
-		      false
-		      )
-		    })
-		}
-		)
-	</script>
 </body>
 </html>
