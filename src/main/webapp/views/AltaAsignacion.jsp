@@ -73,7 +73,7 @@
 
 	<br>
 	<section class="main container">
-		<form class="row g-3 needs-validation" novalidate>
+<!-- 		<form class="row g-3 needs-validation" novalidate> -->
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Nombre</label>
     <input type="text" class="form-control" id="nombre" value="" required>
@@ -95,8 +95,8 @@
       Looks good!
     </div>
   </div>
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">Dirección</label>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Dirección</label>
     <input type="text" class="form-control" id="direccion" required>
     <div class="invalid-feedback">
       Please provide a valid city.
@@ -109,7 +109,7 @@
       Please provide a valid zip.
     </div>
   </div>
-  <br><br><br><br><br>
+  <br>
   <div class="col-12">
     <label for="validationCustom05" class="form-label"><strong>Seleccione el Rol: </strong></label>
   </div>
@@ -126,11 +126,11 @@
         <input type="radio" name="rol" value="3"> Auxiliar
     </label>
   </div>
-  <br/><br/><br/><br/>
+  <br/><br/>
   <div class="col-12">
     <button class="btn btn-primary" onclick="altaEmpleado()">Guardar</button>
   </div>
-</form>
+<!-- </form> -->
 
 
 

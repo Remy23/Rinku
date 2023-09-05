@@ -53,4 +53,14 @@ public class AdministradorController {
 		System.out.println("");
 		return "CapturaMovimientos";
 	}
+	
+	@RequestMapping(value="/detalle", method = RequestMethod.GET)
+	public String detalle(HttpServletRequest request, Model model) {
+		model.addAttribute("scheme", request.getScheme());
+		model.addAttribute("serverName", request.getServerName());
+		model.addAttribute("port", request.getServerPort());
+		model.addAttribute("contextPath", request.getContextPath());
+		System.out.println("");
+		return "DetalleSueldo";
+	}
 }

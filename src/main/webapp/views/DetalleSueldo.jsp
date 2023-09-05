@@ -6,7 +6,7 @@
 <title>Index</title>
 <link rel="stylesheet" type="text/css" href=  "${scheme}://${serverName}:${port}${contextPath}/resources/css/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href=   "${scheme}://${serverName}:${port}${contextPath}/resources/css/css/estilos.css">
-<script src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/js/Captura.js"></script>
+<script src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/js/Detalle.js"></script>
 </head>
 <body>
 <header>
@@ -66,59 +66,27 @@
 	<!-- Aqui va el jumbotron -->
 	<section class="jumbotron">
 		<div class="container">
-			<h1 class="titulo-disenio">Captura de Movimientos por Mes</h1>
+			<h1 class="titulo-disenio">Detalle de Sueldo por Empleado</h1>
+			<!--<p>Blog de diseño</p> -->
 		</div>
 	</section>
 
 	<br>
-  <br>
-  <br>
 	<section class="main container">
-	
     <div class="container">
   <div class="row">
     <div class="col-auto">
-      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;">Número de Empleado:</label>
+      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;">Empleado:</label>
     </div>
     <div class="col-auto">
-      <input type="text" class="form-control" id="numeroEmpleado" placeholder="">
+      <input type="text" class="form-control" id="empleadoId" placeholder="">
     </div>
-    </div>
-    <br>
-    <div class="row">
-    <div class="col-auto">
-      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;">Nombre: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    </div>
-    <div class="col-auto">
-      <input type="text" class="form-control" id="nombreEmpleado" placeholder="">
-    </div>
-    <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-3" id="validarSolicitud" onclick="buscarEmpleado()">Buscar</button>
+   <div class="col-auto">
+      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;">Mes:</label>
   </div>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<div class="row">
-    <div class="col-auto">
-      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;">Rol: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    </div>
-    <div class="col-auto">
-      <input type="text" class="form-control" id="codigoRol" placeholder="">
-      <input type="hidden" class="form-control" id="rolEmpleadoId" placeholder="">
-      <input type="hidden" class="form-control" id="empleadoId" placeholder="">
-    </div>
-    </div>
-<br>
-    <div class="row">
-    <div class="col-auto">
-      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;">Mes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    </div>
-    <div class="col-auto">
-<!--     <label for="validationCustom01" class="form-label">Pais</label> -->
-    <select class="form-select" id="mes" required>
-      <option selected disabled value="">Seleccione...</option>
+  <div class="col-auto">
+          <select class="form-select" id="mes" required>
+      <option value="-1">Seleccione...</option>
       <option value="1">Enero</option>
       <option value="2">Febrero</option>
       <option value="3">Marzo</option>
@@ -133,74 +101,71 @@
       <option value="12">Diciembre</option>
     </select>
   </div>
-    </div>
-    <br>
-    <div class="row">
     <div class="col-auto">
-      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;">Cantidad de entregas:&nbsp;&nbsp;</label>
-    </div>
-    <div class="col-auto">
-      <input type="text" class="form-control" id="cantidadEntrega" placeholder="">
-    </div>
-    </div>
-    <br><br>
-     <div class="col-auto" style="padding-left: 20%;">
-      <button type="submit" class="btn btn-primary mb-3" style="" id="validarSolicitud" onclick="guardarHistorico()">Guardar</button>
-      <button type="submit" class="btn btn-primary mb-3" style="" id="validarSolicitud">Cancelar</button>
+      <button type="submit" class="btn btn-primary mb-3" id="validarSolicitud" onclick="buscarDetalle()">Buscar</button>
   </div>
+    </div>
+    <div class="modal-body text-justify" >
+        <strong>DETALLE</strong>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Horas Trabajadas</th>
+            <th scope="col">Pago Total por Entregas</th>
+            <th scope="col">Pago Total por Bonos</th>
+            <th scope="col">Retención</th>
+            <th scope="col">Vales</th>
+            <th scope="col">Sueldo Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong id="horasTrabajadas">40</strong></td>
+            <td><strong id="pagoPorEntregas">40</strong></td>
+            <td><strong id="pagoPorBonos">40</strong></td>
+            <td><strong id="retencion">40</strong></td>
+            <td><strong id="vales">40</strong></td>
+            <td><strong id="sueldoTotal">40</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
 
-<br>
-<br>
-<br>
+      
 
-<!--<p>Usted esta solicitando un préstamos por un monto de $10,000 el cual deberá ser liquidado en su totalidad a mas tardar el 27 de Marzo 2023 con un cargo adicional del 5%. <br>
-La solicitud deberá se aprobada por su jefe directo y por el personal de nominas.<br>
-El deposito a su cuenta se realiza en un lapso de 3 a 5 dias habiles despues de su aprobación.<br><br>
-
-¿Confirma realizar la solicitud?
-
-</p>-->
-
-<!--<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-	
-	<button type="button" class="btn btn-secondary">Secondary</button>-->
-
+  </div>
+  <div class="row text-center">
+    <div class="col-auto">
+      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;"></label>
+    </div>
+    <div class="col-auto">
+      
+    </div>
+   <div class="col-auto">
+      <label for="staticEmail2" class="visually" style="padding: 0.375rem 0.75rem;"></label>
+  </div>
+  <div class="col-auto">
+  </div>
+    <div class="col-auto">
+      
+  </div>
+    </div>
 	</section>
-
+  <br>
+  <br>
+  <br>
+  <br>
+    <br>
+  <br>
+    <br>
   <br>
 	<footer class="footerActual">
     <div class="container"></div>
   </footer>
+
 	<script type="text/javascript" src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/jquery/jquery-3.6.0.js"></script>
 	<script type="text/javascript" src= "${scheme}://${serverName}:${port}${contextPath}/resources/js/js/bootstrap.js"></script>
+
 
 </body>
 </html>
